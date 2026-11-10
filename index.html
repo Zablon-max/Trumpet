@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Trumpet Fingerings</title>
+  <meta name="description" content="Tap a line or space on the staff to see the B♭ trumpet fingering.">
+  <meta name="theme-color" content="#0b1226">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <header class="top">
+      <div>
+        <h1>Trumpet Fingerings</h1>
+        <p class="sub">B♭ trumpet · written pitch · tap a line or space</p>
+      </div>
+      <div class="top-actions">
+        <label class="toggle">
+          <input type="checkbox" id="showNames" checked>
+          <span class="track"><span class="knob"></span></span>
+          <span class="toggle-label">Note names</span>
+        </label>
+        <button id="installBtn" class="install" type="button" hidden>Install app</button>
+      </div>
+    </header>
+
+    <div class="stage">
+
+      <section class="card staff-card" aria-label="Staff">
+        <svg id="staff" viewBox="0 0 300 352" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Treble clef staff. Tap a line or space to choose a note."></svg>
+      </section>
+
+      <aside class="dock">
+
+        <section class="panel" id="fingeringDisplay" aria-labelledby="fdTitle">
+          <h2 id="fdTitle">Fingering Display</h2>
+          <div class="display">
+            <div class="readout" aria-live="polite">
+              <div class="note-name" id="noteName">—</div>
+              <div class="note-sub" id="noteSub">Tap a line or space on the staff</div>
+              <div class="fingers" id="fingerText">&nbsp;</div>
+            </div>
+            <div class="valves" id="valves" aria-hidden="true">
+              <div class="valve" data-v="1"><div class="piston"><div class="cap"><span>1</span></div><div class="rod"></div></div><div class="casing"></div></div>
+              <div class="valve" data-v="2"><div class="piston"><div class="cap"><span>2</span></div><div class="rod"></div></div><div class="casing"></div></div>
+              <div class="valve" data-v="3"><div class="piston"><div class="cap"><span>3</span></div><div class="rod"></div></div><div class="casing"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="accidentalsPanel" aria-labelledby="apTitle">
+          <h2 id="apTitle">Accidentals Panel</h2>
+          <div class="acc-row" role="group" aria-label="Accidental">
+            <button type="button" class="acc" data-acc="-1" aria-label="Flat"><span class="sym">♭</span><span class="lbl">Flat</span></button>
+            <button type="button" class="acc active" data-acc="0" aria-label="Natural"><span class="sym">♮</span><span class="lbl">Natural</span></button>
+            <button type="button" class="acc" data-acc="1" aria-label="Sharp"><span class="sym">♯</span><span class="lbl">Sharp</span></button>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

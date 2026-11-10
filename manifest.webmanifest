@@ -1,0 +1,16 @@
+{
+  "name": "Trumpet Fingerings",
+  "short_name": "Fingerings",
+  "description": "Tap a line or space on the staff to see the B♭ trumpet fingering.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1226",
+  "theme_color": "#0b1226",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
