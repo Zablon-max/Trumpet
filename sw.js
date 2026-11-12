@@ -1,5 +1,5 @@
 // Bump CACHE_VERSION whenever you change any file, so users get the update.
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const CACHE = 'trumpet-fingerings-' + CACHE_VERSION;
 
 const ASSETS = [
